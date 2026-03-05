@@ -153,8 +153,8 @@ export default function AccountPage() {
             {favor.title}
           </h3>
           <span className={`px-3 py-1 text-xs font-semibold rounded-full border shrink-0 ml-3 ${favor.status === 'active' ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' :
-              favor.status === 'claimed' ? 'bg-amber-500/10 text-amber-400 border-amber-500/20' :
-                'bg-slate-700/40 text-slate-500 border-slate-700/40'
+            favor.status === 'claimed' ? 'bg-amber-500/10 text-amber-400 border-amber-500/20' :
+              'bg-slate-700/40 text-slate-500 border-slate-700/40'
             }`}>
             {favor.status === 'claimed'
               ? (isRequester ? 'Awaiting Confirmation' : 'Pending Confirmation')
@@ -209,7 +209,7 @@ export default function AccountPage() {
   return (
     <div className="min-h-screen bg-slate-950 font-sans text-slate-50">
       <Navbar onPostClick={() => router.push('/')} />
-      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6 pb-24 sm:pb-12">
 
         {/* PROFILE HEADER SECTION */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-12 bg-slate-900 border border-slate-800 p-8 rounded-3xl shadow-lg">

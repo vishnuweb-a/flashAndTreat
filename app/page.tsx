@@ -102,55 +102,54 @@ export default function Home() {
         <Navbar onPostClick={() => { }} />
 
         {/* HERO SECTION */}
-        <div className="relative pt-24 pb-32">
+        <div className="relative pt-16 pb-20 sm:pt-24 sm:pb-32">
           {/* Background glows */}
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute top-0 right-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-0 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="relative mx-auto max-w-5xl px-4 sm:px-6 text-center z-10">
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-5 sm:mb-8 leading-tight">
               Campus Favors,<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
                 Done in a Flash.
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
               The real-time barter and favor board for college students. Post what you need, claim what you can do, and earn Belief Stars.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 sm:mb-20 px-2">
               <SignUpButton>
-                <button className="rounded-full bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 font-bold text-lg transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] active:scale-95 w-full sm:w-auto">
+                <button className="rounded-full bg-blue-600 hover:bg-blue-500 text-white px-7 py-3.5 sm:px-8 sm:py-4 font-bold text-base sm:text-lg transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] active:scale-95 w-full sm:w-auto">
                   Get Started Now
                 </button>
               </SignUpButton>
               <SignInButton>
-                <button className="rounded-full bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-8 py-4 font-bold text-lg transition-all active:scale-95 w-full sm:w-auto">
+                <button className="rounded-full bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-7 py-3.5 sm:px-8 sm:py-4 font-bold text-base sm:text-lg transition-all active:scale-95 w-full sm:w-auto">
                   Login to Account
                 </button>
               </SignInButton>
             </div>
 
-            {/* SNAP OF APPLICATION (Mockup Placeholder) */}
-            <div className="relative mx-auto w-full max-w-4xl rounded-3xl border border-slate-800 bg-slate-900/50 p-2 shadow-2xl shadow-blue-900/20 backdrop-blur-xl aspect-[16/9] md:aspect-[21/9] overflow-hidden group">
+            {/* App mockup — hidden on very small phones to avoid overflow */}
+            <div className="hidden sm:block relative mx-auto w-full max-w-4xl rounded-3xl border border-slate-800 bg-slate-900/50 p-2 shadow-2xl shadow-blue-900/20 backdrop-blur-xl aspect-[16/9] md:aspect-[21/9] overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10" />
               <div className="w-full h-full rounded-2xl bg-slate-950 border border-slate-800 flex flex-col overflow-hidden relative">
-                {/* Faux App UI inside */}
                 <div className="w-full h-12 border-b border-slate-800 flex items-center px-4 gap-2 bg-slate-900/50">
                   <div className="w-3 h-3 rounded-full bg-slate-700" />
                   <div className="w-3 h-3 rounded-full bg-slate-700" />
                   <div className="w-3 h-3 rounded-full bg-slate-700" />
                 </div>
-                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 opacity-30 group-hover:opacity-50 transition-opacity duration-500">
+                <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-4 p-4 opacity-30 group-hover:opacity-50 transition-opacity duration-500">
                   {[1, 2, 3].map((i) => (
-                    <div key={i} className="h-40 rounded-2xl bg-slate-800/80 border border-slate-700/50 p-4 flex flex-col gap-3">
-                      <div className="h-6 w-3/4 bg-slate-700 rounded-md" />
-                      <div className="h-4 w-1/2 bg-slate-700/50 rounded-md mt-auto" />
-                      <div className="h-10 w-full bg-blue-600/20 border border-blue-500/30 rounded-xl" />
+                    <div key={i} className="h-32 rounded-2xl bg-slate-800/80 border border-slate-700/50 p-3 flex flex-col gap-2">
+                      <div className="h-5 w-3/4 bg-slate-700 rounded-md" />
+                      <div className="h-3 w-1/2 bg-slate-700/50 rounded-md mt-auto" />
+                      <div className="h-8 w-full bg-blue-600/20 border border-blue-500/30 rounded-xl" />
                     </div>
                   ))}
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center z-20">
-                  <div className="bg-slate-900/90 border border-slate-700/80 text-slate-200 px-6 py-3 rounded-full font-semibold tracking-wide shadow-2xl backdrop-blur-md flex items-center gap-2">
+                  <div className="bg-slate-900/90 border border-slate-700/80 text-slate-200 px-5 py-2.5 rounded-full font-semibold tracking-wide shadow-2xl backdrop-blur-md flex items-center gap-2 text-sm">
                     <span>Application Snapshot</span>
                     <Zap className="w-4 h-4 text-amber-400" />
                   </div>
@@ -161,31 +160,31 @@ export default function Home() {
         </div>
 
         {/* FEATURES SECTION */}
-        <div className="py-24 bg-slate-900/50 border-y border-slate-800/80 relative">
+        <div className="py-14 sm:py-24 bg-slate-900/50 border-y border-slate-800/80 relative">
           <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
           <div className="mx-auto max-w-5xl px-4 sm:px-6 relative z-10">
-            <h2 className="text-3xl font-bold text-center mb-16 text-slate-100 tracking-tight">Powerful Features</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-8 rounded-3xl bg-slate-800/40 border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
-                <div className="w-14 h-14 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center mb-6">
-                  <Zap className="w-7 h-7" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-16 text-slate-100 tracking-tight">Powerful Features</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
+              <div className="p-6 sm:p-8 rounded-3xl bg-slate-800/40 border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
+                <div className="w-11 h-11 sm:w-14 sm:h-14 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Zap className="w-5 h-5 sm:w-7 sm:h-7" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-slate-100">Real-Time Sync</h3>
-                <p className="text-slate-400 leading-relaxed">Powered by InsForge WebSockets, favors appear instantly without reloading the page.</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-slate-100">Real-Time Sync</h3>
+                <p className="text-sm sm:text-base text-slate-400 leading-relaxed">Favors appear instantly without reloading the page.</p>
               </div>
-              <div className="p-8 rounded-3xl bg-slate-800/40 border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
-                <div className="w-14 h-14 bg-amber-500/20 text-amber-400 rounded-2xl flex items-center justify-center mb-6">
-                  <Star className="w-7 h-7" />
+              <div className="p-6 sm:p-8 rounded-3xl bg-slate-800/40 border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
+                <div className="w-11 h-11 sm:w-14 sm:h-14 bg-amber-500/20 text-amber-400 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Star className="w-5 h-5 sm:w-7 sm:h-7" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-slate-100">Belief Stars</h3>
-                <p className="text-slate-400 leading-relaxed">Earn trust in your community by completing favors and building your reputation.</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-slate-100">Belief Stars</h3>
+                <p className="text-sm sm:text-base text-slate-400 leading-relaxed">Earn trust by completing favors and building your reputation.</p>
               </div>
-              <div className="p-8 rounded-3xl bg-slate-800/40 border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
-                <div className="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
-                  <MessageSquare className="w-7 h-7" />
+              <div className="p-6 sm:p-8 rounded-3xl bg-slate-800/40 border border-slate-700/50 hover:bg-slate-800/60 transition-colors sm:col-span-2 md:col-span-1">
+                <div className="w-11 h-11 sm:w-14 sm:h-14 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
+                  <MessageSquare className="w-5 h-5 sm:w-7 sm:h-7" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-slate-100">Instant Chat</h3>
-                <p className="text-slate-400 leading-relaxed">Coordinate privately with the person claiming your favor using built-in chat.</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-slate-100">Instant Chat</h3>
+                <p className="text-sm sm:text-base text-slate-400 leading-relaxed">Coordinate privately using built-in chat.</p>
               </div>
             </div>
           </div>
@@ -216,7 +215,7 @@ export default function Home() {
     <div className="min-h-screen bg-slate-950 text-slate-50 font-sans">
       <Navbar onPostClick={() => setIsModalOpen(true)} />
 
-      <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+      <main className="mx-auto max-w-5xl px-4 py-6 sm:py-8 sm:px-6 pb-24 sm:pb-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight text-white mb-2">
             Live Favors Board ⚡

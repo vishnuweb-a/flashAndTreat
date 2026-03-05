@@ -70,7 +70,7 @@ export default function SellPage() {
     <div className="min-h-screen bg-slate-950 text-slate-50 font-sans">
       <Navbar onPostClick={() => router.push('/')} />
 
-      <main className="max-w-6xl mx-auto px-4 py-12 sm:px-6">
+      <main className="max-w-6xl mx-auto px-4 py-12 sm:px-6 pb-24 sm:pb-12">
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-10">
@@ -120,8 +120,8 @@ export default function SellPage() {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`shrink-0 px-4 py-2 text-sm font-semibold rounded-full border transition-all ${activeCategory === cat
-                  ? 'bg-blue-600 text-white border-blue-500 shadow-[0_0_10px_rgba(37,99,235,0.3)]'
-                  : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700'
+                ? 'bg-blue-600 text-white border-blue-500 shadow-[0_0_10px_rgba(37,99,235,0.3)]'
+                : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700'
                 }`}
             >
               {cat}
