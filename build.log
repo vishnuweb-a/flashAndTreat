@@ -1,0 +1,64 @@
+ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\vishnu bhardwaj\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\vishnu bhardwaj\OneDrive\Desktop\flashandtreat\folder\package-lock.json
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./OneDrive/Desktop/flashandtreat/folder/src/components/PostFavorModal.tsx:1:1
+Export useState doesn't exist in target module
+> 1 | import { useState } from 'lucide-react';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { insforge } from '../lib/insforge';
+  3 | import { X } from 'lucide-react';
+  4 |
+
+The export useState was not found in module [project]/OneDrive/Desktop/flashandtreat/folder/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import UserStar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./OneDrive/Desktop/flashandtreat/folder/src/components/PostFavorModal.tsx [Client Component Browser]
+    ./OneDrive/Desktop/flashandtreat/folder/app/page.tsx [Client Component Browser]
+    ./OneDrive/Desktop/flashandtreat/folder/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./OneDrive/Desktop/flashandtreat/folder/src/components/PostFavorModal.tsx [Client Component SSR]
+    ./OneDrive/Desktop/flashandtreat/folder/app/page.tsx [Client Component SSR]
+    ./OneDrive/Desktop/flashandtreat/folder/app/page.tsx [Server Component]
+
+
+./OneDrive/Desktop/flashandtreat/folder/src/components/PostFavorModal.tsx:1:1
+Export useState doesn't exist in target module
+> 1 | import { useState } from 'lucide-react';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { insforge } from '../lib/insforge';
+  3 | import { X } from 'lucide-react';
+  4 |
+
+The export useState was not found in module [project]/OneDrive/Desktop/flashandtreat/folder/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import UserStar?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./OneDrive/Desktop/flashandtreat/folder/src/components/PostFavorModal.tsx [Client Component Browser]
+    ./OneDrive/Desktop/flashandtreat/folder/app/page.tsx [Client Component Browser]
+    ./OneDrive/Desktop/flashandtreat/folder/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./OneDrive/Desktop/flashandtreat/folder/src/components/PostFavorModal.tsx [Client Component SSR]
+    ./OneDrive/Desktop/flashandtreat/folder/app/page.tsx [Client Component SSR]
+    ./OneDrive/Desktop/flashandtreat/folder/app/page.tsx [Server Component]
+
+
+    at <unknown> (./OneDrive/Desktop/flashandtreat/folder/src/components/PostFavorModal.tsx:1:1)
+    at <unknown> (./OneDrive/Desktop/flashandtreat/folder/src/components/PostFavorModal.tsx:1:1)
